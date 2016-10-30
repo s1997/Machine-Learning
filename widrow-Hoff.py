@@ -13,69 +13,6 @@ def mid_eval(a,b):
 
 	return rslt
 
-
-# def mod(x):
-# 	if x < 0:
-# 		return x*(-1)
-# 	else:
-# 		return x
-
-# nk = 0
-# def widrow_hoff():
-# 	weight = [1,1,1]
-# 	eta = 0.9
-# 	global nk 
-# 	theta = 0.5
-# 	iterations = 0
-# 	while(1):
-# 		iterations += 1
-# 		classi = 0
-# 		print weight
-# 		for i in xrange(len(dataset)):
-# 			semi = mid_eval(weight, dataset[i])
-# 			correct = 0
-# 			for j in xrange(3):
-# 				if (mod(eta*(semi-1)*dataset[i][j])) < theta:
-# 					correct+=1
-
-# 			if correct == 3:
-# 				classi += 1
-
-
-# 		if classi != len(dataset):          # if not all the points are correctly classified.
-# 			for i in xrange(len(dataset)):
-# 				nk += 1
-# 				eta = eta/nk           #using anneling for learning rate. n(k)=n(1)/k
-# 				semi = mid_eval(weight, dataset[i])
-# 				correct = 0
-# 				for j in xrange(3):
-# 					if mod((eta*(semi-1)*dataset[i][j])) < theta:
-# 						correct+=1
-# 				if correct == 3:       #whatif the classification becomes true only due to change in the eta value.
-# 					break
-
-# 				for j in xrange(3):
-# 					weight[j] = weight[j] + float(eta*(1-semi)*dataset[i][j])
-
-# 		if classi == len(dataset):
-# 			print "weights: ",
-# 			print weight
-# 			print "no. of Iterations: ",
-# 			print iterations
-# 			break
-
-# 		if correct == 3:
-# 			print "weights: ",
-# 			print weight
-# 			print "no. of Iterations: ",
-# 			print iterations
-# 			break
-
-# 	print "value of K: ",
-# 	print nk
-# 	return weight
-
-
 def comp_funcn(a):
 	result = 0
 	for i in xrange(3):
